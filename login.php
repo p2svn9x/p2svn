@@ -1,8 +1,8 @@
 <?php
 session_start();
-require("include/config.php");
-require("include/lang.php");
-require("include/function.php");
+include("include/config.php");
+include("include/lang.php");
+include("inclde/function.php");
 if(isset($_POST['submit'])){
 $user = $_POST['user'];
 $pass = md5($_POST['pass']);
@@ -15,9 +15,7 @@ $_SESSION['user']=$fetch[user];}
 }
 
 
-if (isset($_SESSION['user'])){ header("Location: $home_patch");} else
-{
-?>
+if (isset($_SESSION['user'])){ header("Location: $home_patch");} ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -90,12 +88,3 @@ if (isset($_SESSION['user'])){ header("Location: $home_patch");} else
 
 
 
-<?php
-
-}
-
-
-
-
-
-?>
